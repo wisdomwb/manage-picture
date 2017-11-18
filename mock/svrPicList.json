@@ -1,0 +1,21 @@
+{
+  "status": "0",
+  "msg": "",
+  "result": [
+    {
+      "id": "0",
+      "name": "cai0.jpg",
+      "src": "cai0.jpg"
+    },
+    {
+      "id": "1",
+      "name": "cai1.jpg",
+      "src": "cai1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "cai2.jpg",
+      "src": "cai2.jpg"
+    }
+  ]
+}

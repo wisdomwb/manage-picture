@@ -1,0 +1,274 @@
+body {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  color: #333;
+  font: 14px 'microsoft yahei';
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+#app {
+  display: flex;
+  flex-flow: column;
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px 50px;
+}
+
+#app > header {
+  flex: none;
+  line-height: 30px;
+  border-bottom: 1px solid #ccc;
+  text-indent: 20px;
+  font-size: 16px;
+}
+
+section {
+  flex: auto;
+  flex-flow: column;
+  display: flex;
+}
+
+.operate {
+  flex: none;
+  text-align: right;
+  line-height: 50px;
+  padding-top: 10px;
+}
+
+.food-list {
+  flex: auto;
+  overflow-y: auto;
+  margin-bottom: 50px;
+}
+
+.food-list img {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
+.food-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.food-list ul li {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.12);;
+}
+
+.food-list ul li .del-pic {
+  line-height: 30px;
+  text-align: center;
+  background: rgb(243, 243, 243);
+  color: rgb(0, 147, 212);
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  min-width: 82px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: rgb(0, 147, 212);
+  border-color: rgb(0, 147, 212);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+.btn-default {
+  color: rgb(0, 147, 212);
+  background-color: #fff;
+  /*border-color: #ccc;*/
+}
+
+.btn-default:hover {
+  color: rgb(0, 147, 212);
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .65;
+}
+
+.btn-group {
+  text-align: center;
+}
+
+.btn-group button:first-child {
+  margin-right: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+}
+
+.upload-modal {
+  background: #fff;
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 201;
+}
+
+.upload-modal > header {
+  border-bottom: 1px solid #ddd;
+  line-height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.upload-modal > .body {
+  padding: 0 20px;
+}
+
+.upload-modal .tips {
+  line-height: 40px;
+}
+
+.upload-modal .tips > span {
+  color: #aaa;
+}
+
+.upload-modal .panel {
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.12);;
+}
+
+.upload-modal .panel .panel-header {
+  background: rgb(243, 243, 243);
+  line-height: 40px;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.upload-modal .panel .panel-header > span {
+  color: #aaa;
+}
+
+.upload-modal .panel .panel-footer {
+  background: rgb(243, 243, 243);
+  line-height: 40px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.upload-modal .panel .pic-list {
+  padding: 20px 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.upload-modal .panel .pic-list li {
+  line-height: 24px;
+}
+
+.upload-modal .panel .pic-list li .title, .upload-modal .panel .pic-list li .status {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.upload-modal .panel .pic-list li .title {
+  width: 70%;
+}
+
+.upload-modal .panel .pic-list li .status {
+  width: 28%;
+  text-align: right;
+}
+
+.upload-modal .panel .pic-list li .status.uploading {
+  color: rgb(0, 147, 212);
+}
+
+.upload-modal .panel .pic-list li .status.too-big {
+  color: #ff8d48;
+}
+
+.upload-modal .btn-group {
+  text-align: center;
+  margin: 20px;
+}
+
+.upload-modal .upload-result {
+  text-align: center;
+  color: rgb(0, 147, 212);
+  margin-top: 10px;
+}
+
+.upload-modal footer {
+  text-align: right;
+  color: rgb(0, 147, 212);
+  padding-right: 20px;
+  margin: 20px 0;
+}
+
+.upload-modal footer span {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  .upload-modal {
+    width: 300px !important;
+  }
+}
